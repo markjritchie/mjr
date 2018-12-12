@@ -4,7 +4,7 @@
   </h1>
 
   <mat-form-field>
-    <mat-select placeholder="Select a city" [formControl]="cityControl" (selectionChange)="onChange($event)">
+    <mat-select placeholder="Select a city" (selectionChange)="onChange($event)">
       <mat-option>-- None --</mat-option>
       <mat-optgroup *ngFor="let country of countries" [label]="country.name"
                     [disabled]="country.disabled">

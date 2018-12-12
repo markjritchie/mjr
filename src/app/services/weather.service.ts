@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material';
 import { Location } from '../models/location';
 
 @Injectable({
@@ -12,7 +11,7 @@ import { Location } from '../models/location';
 export class WeatherService {
 
   private apiUrl = 'https://api.openweathermap.org/data/2.5/forecast?appid=3f0bedb111e1607e4787c5725cbd7cf8&units=metric';
-  constructor(private http: HttpClient, private snackBar: MatSnackBar) { }
+  constructor(private http: HttpClient) { }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

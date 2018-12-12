@@ -1,5 +1,4 @@
-import { Component, SimpleChange } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component } from '@angular/core';
 import { Location } from './models/location';
 import { MatSelectChange } from '@angular/material';
 
@@ -20,9 +19,8 @@ export interface Countries {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = `Mark's very underwhelming weather site.`;
+  title = `Mark's very underwhelming weather site`;
   location: Location;
-  cityControl = new FormControl();
   countries: Countries[] = [
     {
       name: 'UK',
