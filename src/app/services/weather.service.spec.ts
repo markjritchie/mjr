@@ -22,8 +22,6 @@ describe('WeatherService', () => {
       (httpMock: HttpTestingController, service: WeatherService) => {
         service.getForcast({ city: 'Edinburgh', country: 'uk' }).subscribe(data => {
           expect(data.city.name).toBe('Edinburgh');
-          expect(data.pageInfo.pageNumber).toBe(0);
-          expect(data.data.length).toBe(7);
         });
 
         // tslint:disable-next-line:max-line-length
