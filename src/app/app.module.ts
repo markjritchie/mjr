@@ -10,12 +10,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material';
+import { MatGridListModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent
+    WeatherComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,11 @@ import { MatGridListModule } from '@angular/material';
     MatGridListModule,
     MatSelectModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule
   ],
   exports: [MatSnackBarModule],
   providers: [],
