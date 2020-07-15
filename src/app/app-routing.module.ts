@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FullscreenOverlayContainer } from '@angular/cdk/overlay';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
-const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'dashboard'},
-  { path: 'home', pathMatch: 'full', redirectTo: 'dashboard'},
-  { path: 'dashboard', component: DashboardComponent}
-];
+
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
